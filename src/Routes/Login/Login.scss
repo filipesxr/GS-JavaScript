@@ -1,0 +1,81 @@
+@import '../../Style/Global.scss';
+@import '../../Style/Variables.scss';
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+
+    & .form{
+        width: 800px;
+        height: 580px;
+        margin: 100px;
+        border: none;
+        border-radius: 18px;
+        background-color: var(--accentColor);
+
+        & .header-form{
+            text-align: center;
+            margin: 30px;
+        }
+
+        & .email-form{
+            text-align: center;
+            margin: 40px;
+
+            & label{
+                padding: 10px;
+            }
+
+            & input{
+                width: 40%;
+                height: 40px;
+                border: 1px solid black;
+                border-radius: 18px;
+                padding: 5px;
+            }
+        }
+
+        & .password-form{
+            text-align: center;
+            margin: 40px;
+
+            & label{
+                padding: 10px;
+            }
+
+            & input{
+                width: 40%;
+                height: 40px;
+                border: 1px solid black;
+                border-radius: 18px;
+                padding: 5px;
+            }
+        }
+
+        & .button-form{
+            text-align: center;
+            margin: 20px;
+
+            & button{
+                width: 50%;
+                height: 40px;
+                background-color: var(--primaryColor);
+                color: var(--accentColor);
+                border: none;
+                border-radius: 18px;
+                cursor: pointer;
+            }
+        }
+
+        & .footer-form{
+            text-align: center;
+        }
+    }
+}

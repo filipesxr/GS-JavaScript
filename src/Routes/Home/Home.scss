@@ -1,0 +1,161 @@
+@import '../../Style/Variables.scss';
+@import '../../Style/Global.scss';
+
+.icon{
+    width: 80px;
+    height: 40px;
+}
+
+.btn{
+    background-color: var(--darkColor);
+    color: var(--accentColor);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+
+    & .top-container{
+        display: grid;
+        margin: 20px;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "showcase showcase top-box-a"
+        "showcase showcase top-box-b"
+        "info info top-box-c";
+
+        & .showcase{
+            grid-area: showcase;
+            min-height: 500px;
+            background-image: url('../../Image/hapvida.jpg');
+            background-size: cover;
+            background-position: center ;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        & .top-box-a{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            padding: 1.5rem;
+            grid-area: top-box-a;
+            background-color: var(--accentColor);
+        }
+
+        & .top-box-b{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            padding: 1.5rem;
+            grid-area: top-box-b;
+            background-color: var(--accentColor);
+        }
+
+        & .info{
+            grid-area: info;
+            background-color: var(--accentColor);
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 3rem;
+
+            & .btn{
+                margin-right: auto;
+            }
+        }
+
+        & .top-box-c{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            padding: 1.5rem;
+            min-height: 240px;
+            grid-area: top-box-c;
+            background-color: var(--accentColor);
+        }
+    }
+}
+
+.boxes{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    & .box{
+        background-color: var(--accentColor);
+        text-align: center;
+        padding: 1.5rem;
+        margin: 20px;
+    }
+}
+
+footer{
+    margin-top: 2rem;
+    background-color: var(--accentColor);
+    color: var(--darkColor);
+    text-align: center;
+    padding: 1rem;
+}
+
+/*Media Queries*/
+@media (max-width: 700px) {
+    .top-container{
+        grid-template-areas: 
+        "showcase showcase"
+        "top-box-a top-box-b"
+        "top-box-c" "info";
+    }
+
+    .main-header{
+        grid-template-columns: 1fr;
+    }
+
+    .info{
+        grid-template-columns: 1fr
+    }
+
+    .info .btn{
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-container {
+      grid-template-areas:
+        "showcase"
+        "top-box-a"
+        "top-box-b"
+        "top-box-c";
+    }
+  }
+
+.block-container{
+    align-items: center;
+    text-align: center;
+    margin: 300px;
+    padding: 50px;
+    border: none;
+    border-radius: 15px ;
+    background-color: var(--accentColor);
+
+    & h1{
+        color: red;
+    }
+
+    & p{
+        font-size: 18px;
+    }
+}
